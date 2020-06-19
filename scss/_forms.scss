@@ -1,0 +1,169 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem;
+
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(20, 50px);
+    gap: 10px 100px;
+    width: 100%;
+    margin-top: 5rem;
+    // margin-left: 60px;
+    // margin-right: 60px;
+
+    &__register {
+        grid-column: 1;
+        grid-row: 1/10;
+        // background-color:blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        
+    }
+
+    &__send-email {
+        grid-column: 1;
+        grid-row: 11/21;
+        background-color: #fff;
+    }
+
+    &__sign-in {
+        grid-column: 2;
+        grid-row: 1/6;
+        background-color: #fff;
+    }
+
+    &__recover {
+        grid-column: 2;
+        grid-row: 7/12;
+        background-color: #fff;
+    }
+
+    &__subscribe {
+        grid-column: 2;
+        grid-row: 13/17;
+        background-color: #fff;
+    }
+
+    &__mini-logo {
+        grid-column: 2;
+        grid-row: 18/21;
+        background-color: #fff;
+    }
+
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    border: 15px solid rgba($color: #000000, $alpha: 0.5);
+    background-color: $color-white;
+    background-clip: padding-box;
+    padding: 10px;
+    width: 100%;
+    
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        font-family: $font-titanium;
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
+
+    &__username {
+        @include form-element;
+        .icon {
+           @include form-icon;
+            
+        }
+        .line {
+           @include form-line;
+        }
+        input {
+           @include form-input;
+            
+        }
+    }
+    &__password {
+        @include form-element;
+        .icon {
+           @include form-icon;
+            
+        }
+        .line {
+           @include form-line;
+        }
+        input {
+           @include form-input;
+            
+        }
+    }
+
+    &__confirm-password {
+        @include form-element;
+        .icon {
+           @include form-icon;
+            
+        }
+        .line {
+           @include form-line;
+        }
+        input {
+           @include form-input;
+            
+        }
+    }
+
+    &__email {
+        @include form-element;
+        .icon {
+           @include form-icon;
+            
+        }
+        .line {
+           @include form-line;
+        }
+        input {
+           @include form-input;
+            
+        }
+    }
+
+    &__location {
+        @include form-element;
+        .icon {
+           @include form-icon;
+            
+        }
+        .line {
+           @include form-line;
+        }
+        select {
+           @include form-input;
+           color: rgba($color: #000000, $alpha: 0.6);
+           outline:none;
+            
+        }
+    }
+    &__accept-terms{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        input {
+
+        }
+        p{
+            font-style: 2rem;
+        }
+    }
+}

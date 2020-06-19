@@ -6,6 +6,66 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <div class="content">
+        <img src="./img/logo.png" alt="logo">
+        <div class="forms">
+            <div class="forms__register">
+                <div class="register-form__title">Register Form</div>
+                <form class="register-form" action="#">
+                    <div class="register-form__username">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                        <div class="line"></div>
+                        <input type="text" placeholder="Username" >
+                    </div>
+                    <div class="register-form__password">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-lock-closed"></use>
+                        </svg>
+                        <div class="line"></div>
+                        <input type="text" placeholder="Password" >
+                    </div>
+                    <div class="register-form__confirm-password">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-lock-closed"></use>
+                        </svg>
+                        <div class="line"></div>
+                        <input type="text" placeholder="Confirm Password">
+                    </div>
+                    <div class="register-form__email">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                        </svg>
+                        <div class="line"></div>
+                        <input type="text" placeholder="Email" >
+                    </div>
+                    <div class="register-form__location">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-location"></use>
+                        </svg>
+                        <div class="line"></div>
+                        <select >
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="register-form__accept-terms">
+                        <input type="checkbox">
+                        <p>I have read and accept the terms of use</p>
+                    </div>
+                    
+                    <button type="submit" > Sign up </button>
+                </form>
+            </div>
+            <div class="forms__send-email"></div>
+            <div class="forms__sign-in"></div>
+            <div class="forms__recover"></div>
+            <div class="forms__subscribe"></div>
+            <div class="forms__mini-logo"></div>
+        </div>
+    </div>
 </body>
 </html>
