@@ -164,11 +164,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 15px solid rgba(0, 0, 0, 0.5);
   background-color: #fff;
-  background-clip: padding-box;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
+  border-radius: 5px;
+}
+
+.register-form__background {
+  width: 100%;
+  padding: 5px;
+  background-clip: padding-box;
+  border: 15px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .register-form__title {
@@ -180,7 +188,7 @@ body {
 }
 
 .register-form__username {
-  height: 40px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,10 +223,11 @@ body {
   height: 100%;
   border: none;
   font-size: 2rem;
+  outline: none;
 }
 
 .register-form__password {
-  height: 40px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,10 +262,11 @@ body {
   height: 100%;
   border: none;
   font-size: 2rem;
+  outline: none;
 }
 
 .register-form__confirm-password {
-  height: 40px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,10 +301,11 @@ body {
   height: 100%;
   border: none;
   font-size: 2rem;
+  outline: none;
 }
 
 .register-form__email {
-  height: 40px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,10 +340,11 @@ body {
   height: 100%;
   border: none;
   font-size: 2rem;
+  outline: none;
 }
 
 .register-form__location {
-  height: 40px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,12 +379,14 @@ body {
   height: 100%;
   border: none;
   font-size: 2rem;
+  outline: none;
   color: rgba(0, 0, 0, 0.6);
   outline: none;
 }
 
 .register-form__accept-terms {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,7 +398,61 @@ body {
           align-items: center;
 }
 
+.register-form__accept-terms input {
+  display: none;
+}
+
+.register-form__accept-terms input:checked ~ .checkbox-terms > div {
+  background-color: #93D02B;
+}
+
+.register-form__accept-terms .checkbox-terms {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin-right: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.register-form__accept-terms .checkbox-terms div {
+  width: 60%;
+  height: 60%;
+  border-radius: 2px;
+}
+
 .register-form__accept-terms p {
-  font-style: 2rem;
+  font-family: Titanium;
+  font-weight: 200;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.6rem;
+}
+
+.register-form__submit-button {
+  background-color: #93D02B;
+  border: none;
+  font-size: 2.3rem;
+  color: #fff;
+  padding: 1rem;
+  border: solid #3A9A00 2px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.register-form__submit-button:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 /*# sourceMappingURL=main.css.map */
