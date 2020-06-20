@@ -5,58 +5,93 @@
     align-items: center;
     padding: 4rem;
 
+    img{
+        opacity: 0.3;
+    }
+
 }
 
 .forms {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(20, 50px);
+    grid-template-rows: repeat(20, 60px);
     gap: 10px 100px;
     width: 100%;
     margin-top: 5rem;
-    // margin-left: 60px;
-    // margin-right: 60px;
 
+    //REGISTER FORM STYLING---------------
     &__register {
         grid-column: 1;
         grid-row: 1/10;
-        // background-color:blue;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        height: 100%;
+        // background-color:blue;
 
-        
     }
 
     &__send-email {
         grid-column: 1;
         grid-row: 11/21;
-        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        // background-color: #fff;
     }
 
     &__sign-in {
         grid-column: 2;
         grid-row: 1/6;
-        background-color: #fff;
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
     }
 
     &__recover {
         grid-column: 2;
         grid-row: 7/12;
-        background-color: #fff;
+        // background-color: RED;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
     }
 
     &__subscribe {
         grid-column: 2;
         grid-row: 13/17;
-        background-color: #fff;
+        // background-color: RED;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
     }
 
     &__mini-logo {
         grid-column: 2;
         grid-row: 18/21;
-        background-color: #fff;
+        // background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+
+        img{
+            opacity: 0.2;
+        }
+
     }
 
 }
@@ -67,17 +102,19 @@
     background-color: $color-white;
     padding: 15px;
     width: 100%;
+    height: 100%;
     border-radius: 5px;
-    
-    &__background{
+
+    &__background {
         width: 100%;
+        height: 100%;
         padding: 5px;
         background-clip: padding-box;
         border: 15px solid rgba($color: #000000, $alpha: 0.4);
         border-radius: 5px;
         background-color: rgba($color: #000000, $alpha: 0.4);
     }
-    
+
     &__title {
         color: $color-white;
         font-size: 3rem;
@@ -88,96 +125,113 @@
 
     &__username {
         @include form-element;
+
         .icon {
-           @include form-icon;
-            
+            @include form-icon;
+
         }
+
         .line {
-           @include form-line;
+            @include form-line;
         }
+
         input {
-           @include form-input;
-            
+            @include form-input;
+
         }
     }
+
     &__password {
         @include form-element;
+
         .icon {
-           @include form-icon;
-            
+            @include form-icon;
+
         }
+
         .line {
-           @include form-line;
+            @include form-line;
         }
+
         input {
-           @include form-input;
-            
+            @include form-input;
+
         }
     }
 
     &__confirm-password {
         @include form-element;
+
         .icon {
-           @include form-icon;
-            
+            @include form-icon;
+
         }
+
         .line {
-           @include form-line;
+            @include form-line;
         }
+
         input {
-           @include form-input;
-            
+            @include form-input;
+
         }
     }
 
     &__email {
         @include form-element;
+
         .icon {
-           @include form-icon;
-            
+            @include form-icon;
+
         }
+
         .line {
-           @include form-line;
+            @include form-line;
         }
+
         input {
-           @include form-input;
-            
+            @include form-input;
+
         }
     }
 
     &__location {
         @include form-element;
+
         .icon {
-           @include form-icon;
-            
+            @include form-icon;
+
         }
+
         .line {
-           @include form-line;
+            @include form-line;
         }
+
         select {
-           @include form-input;
-           color: rgba($color: #000000, $alpha: 0.6);
-           outline:none;
-            
+            @include form-input;
+            color: rgba($color: #000000, $alpha: 0.6);
+            outline: none;
+
         }
     }
-    &__accept-terms{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+
+    &__accept-terms {
+        margin-top: auto;
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
         input {
             display: none;
-            
+
         }
 
-        input:checked ~.checkbox-terms>div {
+        input:checked~.checkbox-terms>div {
             background-color: $color-primary-green
         }
 
-        .checkbox-terms{
+        .checkbox-terms {
+            
             width: 20px;
             height: 20px;
             border-radius: 3px;
@@ -187,7 +241,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            
+
 
             div {
                 width: 60%;
@@ -195,28 +249,502 @@
                 border-radius: 2px;
             }
         }
-        
-        p{
+
+        .checkbox-text {
             font-family: $font-titanium;
             font-weight: 200;
             color: rgba($color: #000000, $alpha: 0.6);
             font-size: 1.6rem;
+            cursor: pointer;
         }
     }
-    &__submit-button{
+
+    &__submit-button {
         background-color: $color-primary-green;
         border: none;
         font-size: 2.3rem;
         color: $color-white;
         padding: 1rem;
-        border: solid #3A9A00 2px ;
+        border: solid #3A9A00 2px;
         border-radius: 5px;
         outline: none;
         cursor: pointer;
         transition: all .2s;
+        margin-top: auto;
+        text-shadow: 1px 1px 5px #353434;
     }
-    &__submit-button:hover{
+
+    &__submit-button:hover {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+
+//SEND EMAIL FORM STYLING---------------
+
+.send-email-form {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    // align-items: center;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-clip: padding-box;
+        border: 15px solid rgba($color: #000000, $alpha: 0.4);
+        border-radius: 5px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        font-family: $font-titanium;
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
+
+    &__username {
+        @include form-element;
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    &__email {
+        @include form-element;
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    &__message {
+        @include form-element;
+        resize: none;
+        font-family: $font-titanium;
+        font-weight: 200;
+        font-size: 2rem;
+        // height: 300px;
+        height: 100%;
+        outline: none;
+
+    }
+
+    &__send-copy {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        input {
+            display: none;
+
+        }
+
+        input:checked~.send-copy>div {
+            background-color: $color-primary-green
+        }
+
+        .send-copy {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 1.2rem;
+            border: $border-width solid $color-border-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+
+            div {
+                width: 60%;
+                height: 60%;
+                border-radius: 2px;
+            }
+        }
+
+        .checkbox-text {
+            font-family: $font-titanium;
+            font-weight: 200;
+            color: rgba($color: #000000, $alpha: 0.6);
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+    }
+
+    &__submit-button {
+        background-color: $color-primary-green;
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem;
+        border: solid #3A9A00 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        text-shadow: 1px 1px 5px #353434;
+    }
+
+    &__submit-button:hover {
         transform: translateY(-5px);
     }
 }
+//SIGN IN FORM STYLING---------------
+.sign-in-form{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    // align-items: center;
 
+    &__background {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-clip: padding-box;
+        border: 15px solid rgba($color: #000000, $alpha: 0.4);
+        border-radius: 5px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        font-family: $font-titanium;
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
+
+    &__username {
+        @include form-element;
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    &__password {
+        @include form-element; 
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    
+
+    &__remember-me {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        input {
+            display: none;
+
+        }
+
+        input:checked~.remember-me>div {
+            background-color: $color-primary-green
+        }
+
+        .remember-me {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            margin-right: 1.2rem;
+            border: $border-width solid $color-border-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+
+            div {
+                width: 60%;
+                height: 60%;
+                border-radius: 2px;
+            }
+        }
+
+        .checkbox-text {
+            font-family: $font-titanium;
+            font-weight: 200;
+            color: rgba($color: #000000, $alpha: 0.6);
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+    }
+
+    &__submit-button {
+        background-color: $color-primary-green;
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem 4rem;
+        border: solid #3A9A00 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        margin-left: auto;
+        text-shadow: 1px 1px 5px #353434;
+    }
+
+    &__submit-button:hover {
+        transform: translateY(-5px);
+    }
+}
+//RECOVER FORM STYLING---------------
+.recover-form{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    // align-items: center;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-clip: padding-box;
+        border: 15px solid rgba($color: #000000, $alpha: 0.4);
+        border-radius: 5px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        font-family: $font-titanium;
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
+
+    &__email {
+        @include form-element;
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    &__phone {
+        @include form-element; 
+
+        .icon {
+            @include form-icon;
+            height: 40px;
+            width: 40px;
+
+        }
+
+        .line {
+            @include form-line;
+            margin-left: 2px;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    &__options{
+        margin-top: 2rem;
+        display: flex;
+    }
+
+
+    &__submit-button {
+        background-color: $color-primary-green;
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem 5.5rem;
+        border: solid #3A9A00 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        margin-left: 0px;
+        text-shadow: 1px 1px 5px #353434;
+    }
+
+    &__no-active-button{
+        background-color: rgba($color-primary-green, $alpha: 0.6);
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem 5.5rem;
+        border: solid  rgba( #3A9A00, $alpha: 0.6) 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        text-shadow: 1px 1px 5px #353434;
+        margin-left: auto;
+    }
+
+    &__submit-button:hover {
+        transform: translateY(-5px);
+    }
+}
+//SUBSCRIBE FORM STYLING---------------
+.subscribe-form{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        background-clip: padding-box;
+        border: 15px solid rgba($color: #000000, $alpha: 0.4);
+        border-radius: 5px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+    }
+
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+        font-family: $font-titanium;
+        font-weight: 200;
+        margin-bottom: 1rem;
+    }
+
+    &__email {
+        @include form-element;
+
+        .icon {
+            @include form-icon;
+
+        }
+
+        .line {
+            @include form-line;
+        }
+
+        input {
+            @include form-input;
+
+        }
+    }
+
+    
+
+    &__options{
+        margin-top: 2rem;
+        display: flex;
+    }
+
+
+    &__submit-button {
+        background-color: $color-primary-green;
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem 2.8rem;
+        border: solid #3A9A00 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        margin-left: 0px;
+        text-shadow: 1px 1px 5px #353434;
+    }
+
+    &__no-subscribe{
+        background: linear-gradient(0deg, rgba(243,67,84,1) 44%, rgba(255,108,123,1) 100%);
+        border: none;
+        font-size: 2.3rem;
+        color: $color-white;
+        padding: 1rem 2.8rem;
+        border: solid  red 2px;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s;
+        text-shadow: 1px 1px 5px #353434;
+        margin-left: auto;
+    }
+
+    &__submit-button:hover {
+        transform: translateY(-5px);
+    }
+}

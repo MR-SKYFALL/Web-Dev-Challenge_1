@@ -1,10 +1,12 @@
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <div class="content">
         <img src="./img/logo.png" alt="logo">
@@ -18,14 +20,14 @@
                                 <use xlink:href="img/sprite.svg#icon-user"></use>
                             </svg>
                             <div class="line"></div>
-                            <input type="text" placeholder="Username" >
+                            <input type="text" placeholder="Username">
                         </div>
                         <div class="register-form__password">
                             <svg class="icon">
                                 <use xlink:href="img/sprite.svg#icon-lock-closed"></use>
                             </svg>
                             <div class="line"></div>
-                            <input type="text" placeholder="Password" >
+                            <input type="text" placeholder="Password">
                         </div>
                         <div class="register-form__confirm-password">
                             <svg class="icon">
@@ -39,14 +41,14 @@
                                 <use xlink:href="img/sprite.svg#icon-envelope"></use>
                             </svg>
                             <div class="line"></div>
-                            <input type="text" placeholder="Email" >
+                            <input type="text" placeholder="Email">
                         </div>
                         <div class="register-form__location">
                             <svg class="icon">
                                 <use xlink:href="img/sprite.svg#icon-location"></use>
                             </svg>
                             <div class="line"></div>
-                            <select  >
+                            <select>
                                 <option value="volvo">Your Location</option>
                                 <option value="saab">Saab</option>
                                 <option value="mercedes">Mercedes</option>
@@ -54,23 +56,140 @@
                             </select>
                         </div>
                         <div class="register-form__accept-terms">
-                            <input id="terms"  type="checkbox">
+                            <input id="terms" type="checkbox">
                             <label for="terms" class="checkbox-terms">
                                 <div></div>
                             </label>
-                            <p>I have read and accept the terms of use.</p>
+                            <label class="checkbox-text" for="terms">I have read and accept the terms of use.</label>
                         </div>
-                        
-                        <button class="register-form__submit-button" type="submit" > Sign up </button>
+
+                        <button class="register-form__submit-button" type="submit"> Sign up </button>
                     </form>
                 </div>
             </div>
-            <div class="forms__send-email"></div>
-            <div class="forms__sign-in"></div>
-            <div class="forms__recover"></div>
-            <div class="forms__subscribe"></div>
-            <div class="forms__mini-logo"></div>
+
+
+            <div class="forms__send-email">
+                <div class="send-email-form__title">Send Email</div>
+                <div class="send-email-form__background">
+                    <form class="send-email-form" action="#">
+                        <div class="send-email-form__username">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-user"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div class="send-email-form__email">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Your Email">
+                        </div>
+                        <textarea  class="send-email-form__message" placeholder="Type your message" ></textarea>
+                        <div class="send-email-form__send-copy">
+                            <input id="send-copy" type="checkbox">
+                            <label for="send-copy" class="send-copy">
+                                <div></div>
+                            </label>
+                            <label class="checkbox-text" for="send-copy">Send a copy to my Emial</label>
+                        </div>
+
+                        <button class="send-email-form__submit-button" type="submit"> Send Email </button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="forms__sign-in">
+                <div class="sign-in-form__title">Sign In Form</div>
+                <div class="sign-in-form__background">
+                    <form class="sign-in-form" action="#">
+                        <div class="sign-in-form__username">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-user"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Your Name">
+                        </div>
+                        <div class="sign-in-form__password">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-lock-closed"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Password">
+                        </div>
+                        <div class="sign-in-form__remember-me">
+                            <input id="remember-me" type="checkbox">
+                            <label for="remember-me" class="remember-me">
+                                <div></div>
+                            </label>
+                            <label class="checkbox-text" for="remember-me">Remember me</label>
+                            <button class="sign-in-form__submit-button" type="submit"> Sign in </button>
+                        </div>
+
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="forms__recover">
+                <div class="recover-form__title">Recover Form</div>
+                <div class="recover-form__background">
+                    <form class="recover-form" action="#">
+                        <div class="recover-form__email">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Enter your Email">
+                        </div>
+                        <div class="recover-form__phone">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Enter your Phone number">
+                        </div>
+                        <div class="recover-form__options">
+                            <button class="recover-form__submit-button" type="submit"> Send </button>
+                            <button class="recover-form__no-active-button" type="submit"> Done </button>
+                        </div>
+
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="forms__subscribe">
+                <div class="subscribe-form__title">Subscribe Form</div>
+                <div class="subscribe-form__background">
+                    <form class="subscribe-form" action="#">
+                        <div class="subscribe-form__email">
+                            <svg class="icon">
+                                <use xlink:href="img/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            <div class="line"></div>
+                            <input type="text" placeholder="Enter your Email">
+                        </div>
+                        
+                        <div class="subscribe-form__options">
+                            <button class="subscribe-form__submit-button" type="submit"> Subscribe </button>
+                            <button class="subscribe-form__no-subscribe" type="submit"> No, Thanks </button>
+                        </div>
+
+                        
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="forms__mini-logo">
+                <img  src="./img/mini-logo.png" alt="mini-logo">
+            </div>
         </div>
     </div>
 </body>
+
 </html>
