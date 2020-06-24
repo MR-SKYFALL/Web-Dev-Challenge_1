@@ -5,8 +5,20 @@
     align-items: center;
     padding: 4rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0rem;
+    }
+
     img {
         opacity: 0.3;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            padding: 3rem;
+            padding-bottom: 0;
+        }
+
+        // width: 100%;
     }
 
 }
@@ -14,54 +26,82 @@
 .forms {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(20, 60px);
+    grid-template-rows: repeat(32, 30px);
     gap: 10px 100px;
     width: 100%;
     margin-top: 5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(62, 30px);
+    }
+
 
     //REGISTER FORM STYLING---------------
     &__register {
         @include form-grid-element;
         grid-column: 1;
-        grid-row: 1/10;
+        grid-row: 1/15;
         display: flex;
+
         // background-color:blue;
     }
 
     &__send-email {
         @include form-grid-element;
         grid-column: 1;
-        grid-row: 11/21;
+        grid-row: 16/32;
         // background-color: #fff;
+
     }
 
     &__sign-in {
         @include form-grid-element;
         grid-column: 2;
-        grid-row: 1/6;
+        grid-row: 1/8;
         // background-color: red;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1;
+            grid-row: 33/41;
+        }
     }
 
     &__recover {
         @include form-grid-element;
         grid-column: 2;
-        grid-row: 7/12;
+        grid-row: 10/18;
         // background-color: RED;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1;
+            grid-row: 42/50;
+        }
     }
 
     &__subscribe {
         @include form-grid-element;
         grid-column: 2;
-        grid-row: 13/17;
+        grid-row: 19/25;
         // background-color: RED;
+
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1;
+            grid-row: 51/57;
+        }
     }
 
     &__mini-logo {
         @include form-grid-element;
         grid-column: 2;
-        grid-row: 18/21;
+        grid-row: 27/32;
 
         // background-color: #fff;
+        @media only screen and (max-width: $bp-largest) {
+            grid-column: 1;
+            grid-row: 58/64;
+        }
+
         img {
             opacity: 0.2;
         }
@@ -160,13 +200,14 @@
             @include form-input;
             color: rgba($color: #000000, $alpha: 0.6);
             outline: none;
+            cursor: pointer;
 
         }
     }
 
     &__accept-terms {
         @include form-checkbox-item;
-        margin-top: auto;
+        // margin-top: auto;
 
         input {
             display: none;
@@ -187,7 +228,7 @@
 
     &__submit-button {
         @include form-submit-button;
-        padding: 1rem;
+        padding: 10px;
         margin-top: auto;
     }
 
@@ -349,7 +390,13 @@
 
     &__submit-button {
         @include form-submit-button;
+        width: 150px;
+        height: 50px;
         margin-left: auto;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90px;
+        }
     }
 
     &__submit-button:hover {
@@ -412,15 +459,25 @@
 
     &__submit-button {
         @include form-submit-button;
-        padding: 1rem 5.5rem;
+        width: 150px;
+        height: 50px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90px;
+        }
     }
 
     &__no-active-button {
         @include form-submit-button;
         background-color: rgba($color-primary-green, $alpha: 0.6);
-        padding: 1rem 5.5rem;
         border: solid rgba(#3A9A00, $alpha: 0.6) 2px;
         margin-left: auto;
+        width: 150px;
+        height: 50px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90px;
+        }
     }
 
     &__submit-button:hover {
@@ -466,15 +523,31 @@
 
     &__submit-button {
         @include form-submit-button;
-        padding: 1rem 2.8rem;
+        width: 150px;
+        height: 50px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90px;
+            font-size: 180%;
+        }
     }
 
     &__no-subscribe {
         @include form-submit-button;
         background: linear-gradient(0deg, rgba(243, 67, 84, 1) 44%, rgba(255, 108, 123, 1) 100%);
         border: solid red 1px;
-        padding: 1rem 2.8rem;
         margin-left: auto;
+        width: 150px;
+        height: 50px;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 90px;
+            font-size: 180%;
+        }
+    }
+
+    &__no-subscribe:hover {
+        transform: translateY(-5px);
     }
 
     &__submit-button:hover {
