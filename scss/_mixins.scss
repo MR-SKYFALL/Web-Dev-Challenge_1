@@ -1,32 +1,121 @@
-@mixin form-element {
+@mixin simple-from {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+@mixin form-grid-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+@mixin form-input-element {
     height: 50px;
     display: flex;
-    border: $border-width solid $color-border-primary ;
+    border: $border-width solid $color-border-primary;
     border-radius: 3px;
     padding: .5rem;
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
 }
+
 @mixin form-icon {
-    height:100% ;
+    height: 100%;
     width: 30px;
-    fill:$color-border-primary;
+    fill: $color-border-primary;
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
 @mixin form-line {
     height: 90%;
-    background-color: $color-border-primary ;
+    background-color: $color-border-primary;
     width: $border-width;
     margin-right: 2rem;
-    margin-left: 1rem; 
+    margin-left: 1rem;
 }
+
 @mixin form-input {
     width: 100%;
     height: 100%;
     border: none;
     font-size: 2rem;
     outline: none;
-    
+}
+
+@mixin form-background {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-clip: padding-box;
+    border: 15px solid rgba($color: #000000, $alpha: 0.4);
+    border-radius: 5px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+
+}
+
+@mixin form-title {
+    color: $color-white;
+    font-size: 3rem;
+    font-family: $font-titanium;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+@mixin form-submit-button {
+    background-color: $color-primary-green;
+    border: none;
+    font-size: 2.3rem;
+    color: $color-white;
+    padding: 1rem 4rem;
+    border: solid #3A9A00 2px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s;
+    // margin-left: auto;
+    margin-left: 0;
+    text-shadow: 1px 1px 5px #353434;
+}
+
+@mixin form-checkbox-item {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin form-checkbox-square {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 1.2rem;
+    border: $border-width solid $color-border-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    div {
+        width: 60%;
+        height: 60%;
+        border-radius: 2px;
+    }
+}
+
+@mixin form-checkbox-text {
+    font-family: $font-titanium;
+    font-weight: 200;
+    color: rgba($color: #000000, $alpha: 0.6);
+    font-size: 1.6rem;
+    cursor: pointer;
 }
